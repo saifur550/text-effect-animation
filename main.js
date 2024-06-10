@@ -1,13 +1,13 @@
 
 const sectionContent = document.querySelector('section')
-const title = ['YouTuber', 'Web Developer', 'Graphic Designer'];
+const title = ['YouTuber', 'Web Developer', 'iGraphic Designer'];
 
 let titleIndex = 0;
 let characterOfIndex = 0
 
 function showTitle (){
     sectionContent.innerHTML = 
-    `<span> I Am a  ${title[titleIndex].slice(0,characterOfIndex)} </span>`
+    `<span> I Am ${title[titleIndex].slice(0,1)=="i" ? "an":"a"}  ${title[titleIndex].slice(0,characterOfIndex)} </span>`
 
     if(characterOfIndex < title[titleIndex].length){
         characterOfIndex++
@@ -20,7 +20,7 @@ function showTitle (){
         titleIndex =0
     }
 
-    
+
   
     setTimeout(showTitle, 200);
 }
